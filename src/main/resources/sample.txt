@@ -1,0 +1,13 @@
+Hello
+
+long lineCount = Files.lines(path).count();
+System.out.println("Line Count: " + lineCount);
+
+long lineCount = Files.lines(path).count();
+System.out.println("Line Count: " + lineCount);
+
+long lineCount = Files.lines(path).count();
+System.out.println("Line Count: " + lineCount);
+
+long lineCount = Files.lines(path).count();
+System.out.println("Line Count: " + lineCount);
