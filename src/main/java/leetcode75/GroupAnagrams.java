@@ -33,7 +33,7 @@ Output: [["a"]]
  */
 public class GroupAnagrams {
     public static void main(String[] args) {
-        System.out.println(groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat" }));
+        System.out.println(groupAnagrams(new String[]{"act","pots","tops","cat","stop","hat" }));
 
     }
 

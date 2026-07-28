@@ -4,8 +4,9 @@ public class BestBuyAndSell {
 
     public static void main(String[] args) {
         System.out.println(maxProfit(new int[]{1, 2, 3, 4, 5}));
-        System.out.println(maxProfit(new int[]{7,1,5,3,6,4}));
-        System.out.println(maxProfitOneDay(new int[]{7,1,5,3,6,4}));
+        System.out.println(maxProfit(new int[]{10, 1, 5, 6, 7, 1}));
+        System.out.println(maxProfit(new int[]{7, 1, 5, 3, 6, 4}));
+        System.out.println(maxProfitOneDay(new int[]{7, 1, 5, 3, 6, 4}));
 
     }
 
@@ -31,7 +32,7 @@ public class BestBuyAndSell {
         for (int price : prices) {
             if (price < minPrice) {
                 minPrice = price;
-            }  else if (price - minPrice > maxProfit) {
+            } else if (price - minPrice > maxProfit) {
                 maxProfit = price - minPrice;
             }
 
