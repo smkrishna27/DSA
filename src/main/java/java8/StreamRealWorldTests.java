@@ -10,6 +10,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.partitioningBy;
 
 public class StreamRealWorldTests {
     public static void main(String[] args) {
@@ -41,6 +42,13 @@ public class StreamRealWorldTests {
         Map<String, Double> departments = employees.stream().
                 collect(groupingBy(Employee1::getDepartment, Collectors.averagingInt(Employee1::getSalary)));
         System.out.println("departments: " + departments);
+
+        Map<Boolean, List<Employee1>> par =  employees.stream().
+                collect(partitioningBy(e->"HR".equals(e.getDepartment())));
+
+        System.out.println("partition "+par);
+
+
         //Find the Top N Highest-Paid Employees
         List<Employee1> employee1List = employees.stream().sorted(Comparator.comparingInt(Employee1::getSalary).reversed()).limit(2).toList();
         System.out.println("employeeNHighest-Paid : " + employee1List);
