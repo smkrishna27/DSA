@@ -1,7 +1,5 @@
 package leetcode75;
 
-import com.amazonaws.services.dynamodbv2.xspec.L;
-import com.amazonaws.services.dynamodbv2.xspec.S;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,7 +31,7 @@ Output: [["a"]]
  */
 public class GroupAnagrams {
     public static void main(String[] args) {
-        System.out.println(groupAnagrams(new String[]{"act","pots","tops","cat","stop","hat" }));
+        System.out.println(groupAnagrams(new String[]{"act", "pots", "tops", "cat", "stop", "hat"}));
 
     }
 

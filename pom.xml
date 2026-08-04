@@ -7,7 +7,7 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-   
+
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
@@ -137,34 +137,6 @@
             <version>${spring-boot.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.intuit.platform.jsk.spring</groupId>
-            <artifactId>jsk-config-client</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.intuit.platform.jsk.spring</groupId>
-            <artifactId>jsk-spring-config-idps-client</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
             <groupId>software.amazon.awssdk</groupId>
             <artifactId>sts</artifactId>
         </dependency>
@@ -228,17 +200,6 @@
             <version>2.17.2</version>
         </dependency>
         <dependency>
-            <groupId>com.intuit.paved-road.reporting</groupId>
-            <artifactId>shardify-metadata-store-impl</artifactId>
-            <version>1.0.799</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.intuit.platform.idp</groupId>
-                    <artifactId>rest-client-v2</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
             <groupId>tech.tablesaw</groupId>
             <artifactId>tablesaw-core</artifactId>
             <version>0.43.1</version>
@@ -247,21 +208,6 @@
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
             <version>5.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.intuit.idps</groupId>
-            <artifactId>idps-sdk</artifactId>
-            <version>3.9922.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.bouncycastle</groupId>
-                    <artifactId>bcprov-jdk15on</artifactId> <!-- replaced by bc-fips - see API-1649 -->
-                </exclusion>
-                <exclusion>
-                    <groupId>org.bouncycastle</groupId>
-                    <artifactId>bcpkix-jdk15on</artifactId> <!-- replaced by bcpkix-fips - see API-1649 -->
-                </exclusion>
-            </exclusions>
         </dependency>
         <!-- BouncyCastle FIPS dependencies -->
         <dependency>
@@ -332,13 +278,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>com.intuit.platform.jsk</groupId>
-                <artifactId>jsk-bom</artifactId>
-                <version>${jsk.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>

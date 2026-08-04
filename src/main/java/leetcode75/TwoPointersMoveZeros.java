@@ -1,6 +1,5 @@
 package leetcode75;
 
-import org.checkerframework.checker.units.qual.A;
 
 public class TwoPointersMoveZeros {
     public static void main(String[] args) {

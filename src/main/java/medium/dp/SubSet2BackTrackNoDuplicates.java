@@ -1,6 +1,5 @@
 package medium.dp;
 
-import com.amazonaws.services.dynamodbv2.xspec.L;
 
 import java.util.ArrayList;
 import java.util.Arrays;
