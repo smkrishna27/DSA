@@ -24,9 +24,9 @@ public class BinaryTreeRightSideView {
         if (i == res.size() ) {
             res.add(root.val);
         }
-        rightView(root.left, res, i + 1);
 
         rightView(root.right, res, i + 1);
+        rightView(root.left, res, i + 1);
     }
 }
 

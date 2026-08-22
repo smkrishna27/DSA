@@ -25,7 +25,7 @@ public class LowestCommonAncestorInBinarySearchTree {
         root.left.right.left = new TreeNode(7);
         TreeNode p = root.left;          // Node 5
         TreeNode q = root.right;         // Node 1
-        System.out.println(lowestCommonAncestor(root, p, q).val);
+        System.out.println(lowestCommonAncestor(root, p, q));
 
     }
 

@@ -1,11 +1,11 @@
-package stack;
+package medium.stackqueueandheap;
 
 import java.util.Stack;
 
 public class DecodeString {
 
     public static void main(String[] args) {
-        String s = "3[a]2[bc]";
+        String s = "10[a]2[bc]";
         //"aaabcbc"
 
         System.out.println(decodeString(s));

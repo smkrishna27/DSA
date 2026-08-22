@@ -3,22 +3,24 @@ package medium.dp;
 public class HouseRobber {
 
     public static void main(String[] args) {
-        System.out.println(maxRob(new int[]{1, 3, 3,2 }));
-        System.out.println(maxRob(new int[]{3}));
+        System.out.println(maxRob(new int[]{1, 3, 5, 2}));
+        System.out.println(maxRob(new int[]{3, 4, 7}));
 
     }
 
     public static int maxRob(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         if (nums.length == 1) return nums[0];
+        int dp[] = new int[nums.length + 1];
+        dp[0] = nums[0];
+        dp[1] = Math.max(dp[0], nums[1]);
 
-        int prev2 = 0;
-        int prev1 =0;
-        for (int num : nums) {
-            int cur = Math.max(prev1, prev2 + num);
-            prev2 = prev1;
-            prev1 = cur;
+        for (int i = 2; i < nums.length; i++) {
+            dp[i] = Math.max(dp[i - 2] + nums[i], dp[i - 1]);
+
         }
-        return prev1;
+        return dp[nums.length - 1];
+
+
     }
 }

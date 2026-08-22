@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class CloneGraph {
+    static Map<Node, Node>   graph = new HashMap<>();
     public static void main(String[] args) {
 
 
@@ -14,7 +15,8 @@ public class CloneGraph {
 
     public static Node cloneGraph(Node node) {
         if (node == null) return null;
-        Map<Node, Node> graph = new HashMap<>();
+        if(graph.containsKey(node)) return graph.get(node);
+
         Node clone = new Node(node.val, new ArrayList<>());
         graph.put(node, clone);
         for (Node neighbor : node.neighbors) {

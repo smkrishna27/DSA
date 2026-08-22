@@ -12,31 +12,71 @@ public class ClimbingStairs {
 
     public static void main(String[] args) {
 
-        System.out.println(stairsDP(4));
-        System.out.println(stairs(4));
+        System.out.println(climbStairsDP(4));
+        System.out.println(climbStairs(4));
+        System.out.println(climbStairsRe(4));
+        System.out.println(minCostClimbingStairs(new int[]{10,20,35,40}));
     }
 
-    public static int stairsDP(int stairs) {
-        if (stairs < 2) return stairs;
-        int[] dp = new int[stairs + 1];
+
+    public static int climbStairsDP(int n) {
+
+
+        if (n <= 2) return n;
+
+        int[] dp = new int[n + 1];
         dp[1] = 1;
         dp[2] = 2;
-        for (int i = 3; i <= stairs; i++) {
+
+        for (int i = 3; i <= n; i++) {
             dp[i] = dp[i - 1] + dp[i - 2];
+
         }
-        return dp[stairs];
+        return dp[n];
+
+
     }
 
-    public static int stairs(int n) {
+    public static int climbStairsRe(int n) {
+
+
+        if (n <= 2) return n;
+
+
+        return climbStairsRe(n - 1) + climbStairsRe(n - 2);
+
+
+    }
+
+
+    public static int climbStairs(int n) {
+
+
         if (n < 2) return n;
-        int a = 1, b = 2;
+        int a = 1;
+        int b = 2;
+
         for (int i = 3; i <= n; i++) {
-            int c = a + b;
-            a = b;
+            int c = a + b; //3
+            a = b; //
             b = c;
 
         }
         return b;
 
+
     }
+
+    public static int minCostClimbingStairs(int[] cost) {
+        int n = cost.length;
+        int a = 0, b = 0; // dp[0], dp[1]
+        for (int i = 2; i <= n; i++) {
+            int c = Math.min(a + cost[i-2], b + cost[i-1]);
+            a = b;
+            b = c;
+        }
+        return b;
+    }
+
+
 }

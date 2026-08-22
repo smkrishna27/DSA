@@ -9,7 +9,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
         //s = "eghghhgg"
         //output 3
 
-        System.out.println(lengthOfLongestSubstring("zxyzxyz"));
+        System.out.println(lengthOfLongestSubstring("zwxyzxyz"));
 
     }
 
@@ -18,18 +18,24 @@ public class LongestSubstringWithoutRepeatingCharacters {
         Set<Character> set = new HashSet<>();
         int left = 0;
         int right = 0;
+        int start = 0;
         int maxlength = 0;
         for (right = 0; right < s.length(); right++) {
             char c = s.charAt(right);
             while (set.contains(c)) {
                 set.remove(s.charAt(left));
                 left++;
+
             }
-            maxlength = Math.max(maxlength, right - left+1);
             set.add(c);
+            if (right - left + 1 >= maxlength) {
+                maxlength = right - left + 1;
+                start = left;
+            }
 
 
         }
+        System.out.println(s.substring(start, start + maxlength));
         return maxlength;
 
 

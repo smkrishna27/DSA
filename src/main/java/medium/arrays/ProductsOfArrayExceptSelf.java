@@ -24,11 +24,19 @@ public class ProductsOfArrayExceptSelf {
 
         for (int i = 1; i < nums.length; i++) {
             result[i] = result[i - 1] * nums[i - 1];
+           // System.out.println(result[i]);
+            //1,1,2,8
         }
         int suffix = 1;
         for (int i = nums.length-1 ; i >= 0; i--) {
             result[i] *= suffix;
+
             suffix *= nums[i];
+            System.out.println( result[i] +" -> "+ suffix);
+            //8,2,1,1
+            //6,4,2,1
+           //8,
+            // 6,
         }
 
         return result;

@@ -43,7 +43,6 @@ public class InsertIntervals {
             i++;
         }
 
-
         return insert.toArray(new int[insert.size()][]);
 
 

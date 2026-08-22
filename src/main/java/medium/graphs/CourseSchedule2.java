@@ -14,9 +14,9 @@ public class CourseSchedule2 {
 
         int[][] prerequisites = new int[][]{{0, 1}, {1, 2}, {2, 0}};
         int courses = 3;
-        System.out.println(Arrays.toString(findOrder(courses, prerequisites)));
-        prerequisites = new int[][]{{1, 0}};
-        courses = 3;
+      //  System.out.println(Arrays.toString(findOrder(courses, prerequisites)));
+      prerequisites = new int[][]{{1, 0}};
+        courses = 2;
 
         System.out.println(Arrays.toString(findOrder(courses, prerequisites)));
 
@@ -55,7 +55,7 @@ public class CourseSchedule2 {
 
         }
 
-        return index==numCourses?visited:new int[0];
+        return index == numCourses ? visited : new int[0];
 
 
     }

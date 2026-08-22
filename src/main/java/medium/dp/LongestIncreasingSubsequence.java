@@ -1,12 +1,13 @@
 package medium.dp;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class LongestIncreasingSubsequence {
 
     public static void main(String[] args) {
 
-        System.out.println(lengthOfLIS(new int[]{9,1,4,2,3,3,7}));
+        System.out.println(lengthOfLIS(new int[]{9, 1, 4, 2, 3, 4, 5}));
 
     }
 
@@ -25,7 +26,6 @@ public class LongestIncreasingSubsequence {
             }
 
             max = Math.max(max, dp[i]);
-            System.out.print(dp[i] +" ");
         }
         return max;
     }

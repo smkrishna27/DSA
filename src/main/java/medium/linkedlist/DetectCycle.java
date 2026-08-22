@@ -3,7 +3,6 @@ package medium.linkedlist;
 public class DetectCycle {
 
 
-
     public boolean hasCycle(ListNode head) {
         if (head == null) return false;
         ListNode slow = head;

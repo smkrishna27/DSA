@@ -1,5 +1,6 @@
 package medium.arrays;
 
+import intervals.InsertInterval;
 import leetcode.Array3Sum;
 
 import java.util.*;
@@ -29,11 +30,17 @@ public class ThreeSum {
             int target = 0;
             while (left < right) {
                 int sum = nums[i] + nums[left] + nums[right];
-                if (left < right && sum == target) {
+                if (sum == target) {
                     int[] result = new int[]{nums[i], nums[left], nums[right]};
-                    res.add(Arrays.stream(result)
-                            .boxed()
-                            .collect(Collectors.toList()));
+                    List<Integer> list = new ArrayList<>();
+                    list.add(nums[i]);
+                    list.add(nums[left]);
+                    list.add(nums[right]);
+                    res.add(list);
+
+//                    res.add(Arrays.stream(result)
+//                            .boxed()
+//                            .collect(Collectors.toList()));
                     left++;
                     right--;
                     while (left < right && nums[left] == nums[left - 1]) left++;

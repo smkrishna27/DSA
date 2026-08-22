@@ -1,5 +1,7 @@
 package medium.graphs;
 
+import medium.Test;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -14,8 +16,20 @@ public class NumberOfIslands {
                 {'0', '0', '1', '0', '0'},
                 {'0', '0', '0', '1', '1'}
         };
-        ;
+        Test test= new Test(2,4);
+
+
         System.out.println(numIslands(grid));
+        int[][] dirs = new int[][]{{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+        for(int [] dir:dirs){
+            for(int i=0;i<dir.length;i++) {
+                System.out.print(dir[i] +" ");
+            }
+            System.out.println();
+        }
+
+
+
 
 
     }

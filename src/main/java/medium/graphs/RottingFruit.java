@@ -18,7 +18,7 @@ public class RottingFruit {
     public static int orangesRotting(int[][] grid) {
         int rows = grid.length;
         int cols = grid[0].length;
-        System.out.println(rows + " " + cols);
+
         Queue<int[]> queue = new LinkedList<>();
         int fresh = 0;
         for (int i = 0; i < rows; i++) {
@@ -28,6 +28,8 @@ public class RottingFruit {
             }
         }
         int minutes = 0;
+
+        System.out.println(rows + " " + cols + " " + fresh);
 
         while (!queue.isEmpty() && fresh > 0) {
             int size = queue.size();

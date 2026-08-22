@@ -27,12 +27,12 @@ public class MergeTwoList {
         }
         if (l1 != null) {
             current.next = l1;
-            l1 = l1.next;
+
         }
 
         if (l2 != null) {
             current.next = l2;
-            l2 = l2.next;
+
         }
 
         return  result.next;

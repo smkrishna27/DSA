@@ -8,6 +8,7 @@ import java.util.Queue;
 public class CourseSchedule {
 
     public static void main(String[] args) {
+        System.out.println(canFinish(4,new int[][]{{1,2},{2,3}}));
 
     }
 

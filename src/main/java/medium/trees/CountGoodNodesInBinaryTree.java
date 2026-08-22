@@ -8,8 +8,8 @@ public class CountGoodNodesInBinaryTree {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(9);
         root.left = new TreeNode(3);
-        root.right = null;
-        root.left.right = new TreeNode(6);
+        root.right = new TreeNode(11);
+        root.left.right = new TreeNode(12);
         System.out.println(goodNodes(root));
 
     }

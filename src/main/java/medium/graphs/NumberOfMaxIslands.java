@@ -41,7 +41,6 @@ public class NumberOfMaxIslands {
         int rows = grid.length;
         int cols = grid[0].length;
         int size = 1;
-        int max = 0;
         Queue<int[]> queue = new LinkedList<>();
         queue.offer(new int[]{i, j});
         grid[i][j] = '0'; //visited

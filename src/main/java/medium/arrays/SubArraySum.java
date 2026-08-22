@@ -26,7 +26,7 @@ public class SubArraySum {
     public static int subarraySum(int[] nums, int k) {
 
         Map<Integer, Integer> map = new LinkedHashMap<>();
-        map.put(0, 1);
+       map.put(0, 1);
         int prefixSum = 0;
         int count = 0;
 

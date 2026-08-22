@@ -6,7 +6,9 @@ public class LargestRectangleArea {
 
     public static void main(String[] args) {
         System.out.println(largestRectangleArea(new int[]{2, 2, 2, 2}));
+        System.out.println(largestRectangleArea(new int[]{2, 2}));
     }
+
 
     public static int largestRectangleArea(int[] heights) {
         int maxArea = 0;

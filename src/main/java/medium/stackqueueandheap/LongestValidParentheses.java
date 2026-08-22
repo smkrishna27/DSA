@@ -1,4 +1,4 @@
-package stack;
+package medium.stackqueueandheap;
 
 import java.util.Stack;
 

@@ -7,7 +7,7 @@ public class WordBreak {
     public static void main(String[] args) {
 
         System.out.println(wordBreak("badboy", List.of("bad", "boy")));
-        System.out.println(wordBreak("badboy", List.of("bad", "boys")));
+        System.out.println(wordBreak("badboy", List.of("bad", "boy")));
 
     }
 
