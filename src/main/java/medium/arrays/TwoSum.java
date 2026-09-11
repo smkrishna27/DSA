@@ -6,9 +6,9 @@ public class TwoSum {
 
     public static void main(String[] args) {
 
-       int[][] res =sum(new int[]{3, 4, 5, 2}, 7);
-       for(int[] i :res)
-        System.out.println(Arrays.toString(i));
+        int[][] res = sum(new int[]{3, 4, 5, 2}, 7);
+        for (int[] i : res)
+            System.out.println(Arrays.toString(i));
 
     }
 
@@ -33,6 +33,25 @@ public class TwoSum {
 
 
         return list.toArray(new int[list.size()][2]);
+
+    }
+
+    public int[] twoSum(int[] nums, int target) {
+
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int remain = target - nums[i];
+            if (map.containsKey(remain)) {
+
+                return new int[]{map.get(remain), i};
+
+            }
+            map.put(nums[i], i);
+
+        }
+
+        return new int[0];
+
 
     }
 }

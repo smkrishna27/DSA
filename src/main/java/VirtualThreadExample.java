@@ -1,7 +1,20 @@
+import java.util.concurrent.ThreadFactory;
+
 public class VirtualThreadExample {
     // main function
     public static void main(String[] args) {
         try {
+
+            Runnable printThread = () -> System.out.println(Thread.currentThread());
+
+            ThreadFactory virtualThreadFactory = Thread.ofVirtual().factory();
+            ThreadFactory kernelThreadFactory = Thread.ofPlatform().factory();
+
+            Thread virtualThread = virtualThreadFactory.newThread(printThread);
+            Thread kernelThread = kernelThreadFactory.newThread(printThread);
+
+            virtualThread.start();
+            kernelThread.start();
 
             // Initialization of thread
             Thread.Builder builder = Thread.ofVirtual().name("GFG Thread");

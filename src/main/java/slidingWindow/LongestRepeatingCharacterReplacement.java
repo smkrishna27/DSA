@@ -22,10 +22,11 @@ public class LongestRepeatingCharacterReplacement {
         int maxlen = 0;
         for (int end = 0; end < chars.length; end++) {
             map.put(chars[end], map.getOrDefault(chars[end], 0) + 1);
+            map.merge(chars[end],1, Integer::sum);
             maxfreq = Math.max(maxfreq, map.get(chars[end]));
 
             if ((end - start + 1) - maxfreq > k) {
-                map.put(chars[start], map.getOrDefault(chars[start], 0) - 1);
+                map.merge(chars[start],-1,Integer::sum);
                 start++;
             }
             maxlen = Math.max(maxlen, end - start + 1);
