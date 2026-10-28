@@ -6,6 +6,8 @@ public class DecodeWays {
 
         System.out.println(numDecoding("06"));
 
+        System.out.println(numDecoding("11"));
+
     }
 
     public static int numDecoding(String s) {

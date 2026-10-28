@@ -14,5 +14,14 @@ public class Strings {
         String b = null;
         map.put(b,"c");
         System.out.println(map.get(a));
+
+        String s="Hello";
+        String s1="Hello";
+        String s2=new String("Hello");
+        System.out.println(s==s1);
+        System.out.println(s==s2);
+        System.out.println(s.equals(s2));
+        s.concat(" world");
+        System.out.println(s);
     }
 }

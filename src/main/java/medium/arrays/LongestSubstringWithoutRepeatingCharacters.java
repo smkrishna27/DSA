@@ -9,7 +9,9 @@ public class LongestSubstringWithoutRepeatingCharacters {
         //s = "eghghhgg"
         //output 3
 
-        System.out.println(lengthOfLongestSubstring("zwxyzxyz"));
+      //  System.out.println(lengthOfLongestSubstring("zwxyzxyz"));
+      //  System.out.println(lengthOfLongestSubstring("zxyyz"));
+        System.out.println(lengthOfLongestSubstring("geeksforgeeks"));
 
     }
 
@@ -24,9 +26,11 @@ public class LongestSubstringWithoutRepeatingCharacters {
             char c = s.charAt(right);
             while (set.contains(c)) {
                 set.remove(s.charAt(left));
+            //  System.out.println(s.charAt(left));
                 left++;
 
             }
+          //  System.out.println("out"+set);
             set.add(c);
             if (right - left + 1 >= maxlength) {
                 maxlength = right - left + 1;
@@ -35,6 +39,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
 
         }
+       // System.out.println(start);
         System.out.println(s.substring(start, start + maxlength));
         return maxlength;
 

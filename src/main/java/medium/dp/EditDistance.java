@@ -20,7 +20,7 @@ public class EditDistance {
         for (int i = 0; i <= word2.length(); i++) {
             dp[0][i] = i;
         }
-
+        System.out.println(dp[0][5]);
         for (int i = 1; i <= word1.length(); i++) {
             for (int j = 1; j <= word2.length(); j++) {
                 if (word1.charAt(i - 1) == word2.charAt(j - 1)) {

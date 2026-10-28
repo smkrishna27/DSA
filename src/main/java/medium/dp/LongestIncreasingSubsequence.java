@@ -7,7 +7,7 @@ public class LongestIncreasingSubsequence {
 
     public static void main(String[] args) {
 
-        System.out.println(lengthOfLIS(new int[]{9, 1, 4, 2, 3, 4, 5}));
+        System.out.println(lengthOfLIS(new int[]{6, 1, 4, 2, 3, 4, 5,9,1}));
 
     }
 
@@ -16,7 +16,7 @@ public class LongestIncreasingSubsequence {
             return 0;
         int[] dp = new int[nums.length];
         Arrays.fill(dp, 1);
-        int max = 0;
+        int max = dp[0];
         for (int i = 1; i < nums.length; i++) {
             for (int j = 0; j < i; j++) {
                 if (nums[i] > nums[j]) {

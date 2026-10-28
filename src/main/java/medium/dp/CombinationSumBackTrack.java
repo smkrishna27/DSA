@@ -8,6 +8,8 @@ public class CombinationSumBackTrack {
     public static void main(String[] args) {
 
         System.out.println(combinationSum(new int[]{2, 5, 6, 9}, 9));
+        System.out.println(combinationSum(new int[]{9,2,2,4,6,1,5}, 8));
+
 
     }
 

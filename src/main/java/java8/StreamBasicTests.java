@@ -135,7 +135,8 @@ public class StreamBasicTests {
         System.out.println("stringsL " + stringsL);
         //Count the Occurrences of Each Vowel in a String
         inputS = "Hello How are you";
-        Map<Character, Long> result = inputS.chars().mapToObj(c -> (char) c).filter(c1 -> "aeiou".contains(String.valueOf(c1))).collect(groupingBy(c -> c, Collectors.counting()));
+        Map<Character, Long> result = inputS.chars().mapToObj(c -> (char) c).filter(c1 -> "aeiou".contains(String.valueOf(c1)))
+                .collect(groupingBy(c -> c, Collectors.counting()));
         //Vowel Counts: {e=1, o=2}
         System.out.println("result " + result);
         // Count the Occurrences of Each Digit in a String
@@ -156,11 +157,8 @@ public class StreamBasicTests {
         System.out.println(inputS.chars().mapToObj(c -> String.valueOf((char) c)).reduce("", (a, b) -> b + a));
 //        Advanced Level Questions (41–60)
 //        41. Find the Most Frequent Element in a List
-       words = List.of("apple", "banana", "apple", "orange", "banana", "apple");
-       //apple
-
-
-
+        words = List.of("apple", "banana", "apple", "orange", "banana", "apple");
+        //apple
 
 
     }

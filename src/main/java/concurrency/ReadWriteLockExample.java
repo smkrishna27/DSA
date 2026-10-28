@@ -39,6 +39,6 @@ public class ReadWriteLockExample {
 
         new Thread(writer).start();
         new Thread(reader).start();
-        new Thread(reader).start();
+      //  new Thread(reader).start();
     }
 }

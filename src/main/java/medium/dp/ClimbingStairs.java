@@ -15,6 +15,7 @@ public class ClimbingStairs {
         System.out.println(climbStairsDP(4));
         System.out.println(climbStairs(4));
         System.out.println(climbStairsRe(4));
+        System.out.println(climbStairsRe(5));
         System.out.println(minCostClimbingStairs(new int[]{10,20,35,40}));
     }
 
