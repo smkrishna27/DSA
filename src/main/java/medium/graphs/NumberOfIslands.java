@@ -18,7 +18,6 @@ public class NumberOfIslands {
         };
         Test test= new Test(2,4);
 
-
         System.out.println(numIslands(grid));
         int[][] dirs = new int[][]{{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
         for(int [] dir:dirs){

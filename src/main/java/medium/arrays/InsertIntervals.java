@@ -1,7 +1,6 @@
 package medium.arrays;
 
 
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -30,9 +29,8 @@ public class InsertIntervals {
         }
 
         while (i < intervals.length && intervals[i][0] <= newInterval[1]) {
-
-            newInterval[0] = Math.min(newInterval[0], intervals[i][0]);
-            newInterval[1] = Math.max(newInterval[1], intervals[i][1]);
+            newInterval[0] = Math.min(intervals[i][0], newInterval[0]);
+            newInterval[1] = Math.max(intervals[i][1], newInterval[1]);
             i++;
         }
         insert.add(newInterval);

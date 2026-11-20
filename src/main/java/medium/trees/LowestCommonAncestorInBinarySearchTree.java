@@ -25,13 +25,13 @@ public class LowestCommonAncestorInBinarySearchTree {
         root.left.right.left = new TreeNode(7);
         TreeNode p = root.left;          // Node 5
         TreeNode q = root.right;         // Node 1
-        System.out.println(lowestCommonAncestor(root, p, q));
+        System.out.println(lowestCommonAncestor(root, p, q).val);
 
     }
 
     public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if (root == null) return root;
-        if (root.val == p.val && root.val == q.val) return root;
+        if (root == null) return null;
+        if (root == p || root == q) return root;
         TreeNode left = lowestCommonAncestor(root.left, p, q);
         TreeNode right = lowestCommonAncestor(root.right, p, q);
         if (left != null && right != null) return root;

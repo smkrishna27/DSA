@@ -6,7 +6,7 @@ public class TwoSum {
 
     public static void main(String[] args) {
 
-        int[][] res = sum(new int[]{3, 4, 5, 2}, 7);
+        int[][] res = sum(new int[]{7,3, 4, 5, 2}, 7);
         for (int[] i : res)
             System.out.println(Arrays.toString(i));
 
